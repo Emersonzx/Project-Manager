@@ -1,0 +1,55 @@
+{
+  "projects": [
+    {
+      "name": "r",
+      "budget": "90008689",
+      "category": {
+        "id": "4",
+        "name": "Planejamento"
+      },
+      "cost": -35200,
+      "services": [],
+      "id": 35
+    },
+    {
+      "name": "olá",
+      "budget": "8",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 36
+    },
+    {
+      "name": "yyyyy",
+      "budget": "999",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 37
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Infra"
+    },
+    {
+      "id": 2,
+      "name": "Desenvolvimento"
+    },
+    {
+      "id": 3,
+      "name": "Design"
+    },
+    {
+      "id": 4,
+      "name": "Planejamento"
+    }
+  ]
+}
