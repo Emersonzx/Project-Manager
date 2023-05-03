@@ -1,37 +1,22 @@
 {
   "projects": [
     {
-      "name": "r",
-      "budget": "90008689",
+      "name": "Expansão",
+      "budget": "5000",
       "category": {
-        "id": "4",
-        "name": "Planejamento"
+        "id": "1",
+        "name": "Infra"
       },
-      "cost": -35200,
-      "services": [],
-      "id": 35
-    },
-    {
-      "name": "olá",
-      "budget": "8",
-      "category": {
-        "id": "3",
-        "name": "Design"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 36
-    },
-    {
-      "name": "yyyyy",
-      "budget": "999",
-      "category": {
-        "id": "2",
-        "name": "Desenvolvimento"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 37
+      "cost": 1000,
+      "services": [
+        {
+          "name": "Redes",
+          "cost": "1000",
+          "description": "Expansão das redes",
+          "id": "68ad05d7-709f-4881-97cd-6c044fcd3032"
+        }
+      ],
+      "id": 38
     }
   ],
   "categories": [
