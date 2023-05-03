@@ -70,15 +70,21 @@ function Project() {
     }
   project.cost = newCost
   
-    const projectRef = doc(db, 'projects', id);
-    updateDoc(projectRef, project)
-      .then(() => {
+  const projectRef = doc(db, 'projects', id);
+  updateDoc(projectRef, project)
+    .then(() => {
+      const serviceAlreadyExists = services.some(service => service.id === lastService.id);
+      if (!serviceAlreadyExists) {
         const newServices = [...services, lastService];
         setServices(newServices);
-        setProject({...project, cost: newCost}); 
-        setShowServiceForm(false);
-      })
-      .catch((err) => console.log(err));  
+      }
+      
+      setProject({...project, cost: newCost}); 
+      
+      setShowServiceForm(false);
+    })
+    .catch((err) => console.log(err));
+  
   }
   
   const projectId = id
