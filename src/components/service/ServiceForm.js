@@ -18,10 +18,10 @@ function ServiceForm({ handleSubmit, btnText, projectData}){
         services.push(service)
     
      
-        const updatedProjectData = { ...projectData, services }
+        const ProjectData = { ...projectData, services }
    
        
-        handleSubmit(updatedProjectData)
+        handleSubmit(ProjectData)
     }
     
 

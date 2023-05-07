@@ -1,9 +1,10 @@
+/* Default styles */
 .project_card{
-padding: 1em;
-border: 1px solid grey ;
-border-radius: 5px;
-width: 24%;
-margin: 0.5%;
+    padding: 1em;
+    border: 1px solid grey;
+    border-radius: 5px;
+    width: 24%;
+    margin: 0.5%;
 }
 
 .project_card h4{
@@ -17,13 +18,16 @@ margin: 0.5%;
 .project_card p{
     margin-bottom: 1em;
 }
+
 .project_card p span{
     font-weight: bold;
 }
+
 .category_text{
     display: text;
-align-items: center;
+    align-items: center;
 }
+
 .category_text span{
     display: inline-block;
     width:12px;
@@ -31,26 +35,30 @@ align-items: center;
     border-radius: 12px;
     background-color: white;
     margin-right: 5px;
+}
 
-}
 .category_text .infra{
-background-color: rgb(102, 209, 209);
+    background-color: rgb(102, 209, 209);
 }
+
 .category_text .desenvolvimento{
-background-color: rgb(226, 128, 128);
+    background-color: rgb(226, 128, 128);
 }
+
 .category_text .design{
-background-color: rgb(104, 104, 223);
+    background-color: rgb(104, 104, 223);
 }
+
 .category_text .planejamento{
-background-color: rgb(178, 130, 223);
+    background-color: rgb(178, 130, 223);
 }
 
 .project_card_actions{
-margin-top: 1.2em;
-display: flex;
-align-items: center;
+    margin-top: 1.2em;
+    display: flex;
+    align-items: center;
 }
+
 .project_card_actions a,
 .project_card_actions button{
     text-decoration: none;
@@ -66,13 +74,37 @@ align-items: center;
     align-items: center;
     justify-content: center;
     transition: 0.5s;
-
 }
+
 .project_card_actions svg{
     margin-right: .5em;
 }
+
 .project_card_actions a:hover,
 .project_card_actions button:hover{
     background-color: rgb(26, 3, 3);
     color: rgb(255, 255, 255);
+}
+
+/* Media queries */
+
+/* Small screens */
+@media screen and (max-width: 576px) {
+    .project_card{
+        width: 100%;
+    }
+}
+
+/* Medium screens */
+@media screen and (min-width: 576px) and (max-width: 768px) {
+    .project_card{
+        width: 48%;
+    }
+}
+
+/* Large screens */
+@media screen and (min-width: 768px) {
+    .project_card{
+        width: 31%;
+    }
 }

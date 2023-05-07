@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { collection, addDoc } from 'firebase/firestore';
-import styles from './NewProject.module.css';
-import ProjectForm from '../project/ProjectForm';
 import { useNavigate } from 'react-router-dom';
-import {  db } from '../firebase/firebase';
+import ProjectForm from '../project/ProjectForm';
+import { v4 as uuidv4 } from 'uuid'; 
+
+import styles from './NewProject.module.css';
 
 function NewProject() {
   const navigate = useNavigate();
@@ -14,10 +14,15 @@ function NewProject() {
     setIsSubmitting(true);
 
     try {
+      const projects = JSON.parse(localStorage.getItem('projects')) || [];
+    
       
-      const projectsCollectionRef = collection(db, 'projects');
-      const newDocRef = await addDoc(projectsCollectionRef, project);
-      console.log(`New project created with ID: ${newDocRef.id}`);
+      const id = uuidv4();
+      const newProject = { ...project, id };
+      const updatedProjects = [...projects, newProject];
+      localStorage.setItem('projects', JSON.stringify(updatedProjects));
+      
+      
       navigate('/projects', { state: { message: 'Projeto criado com sucesso!' } });
     } catch (error) {
       console.error('Error creating project:', error);
